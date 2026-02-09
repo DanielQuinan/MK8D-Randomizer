@@ -1,8 +1,6 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 import { renderCharacterSelectSection } from './sections/charSelect'
+import { renderNamesSection } from './sections/namesSection'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="app-shell">
@@ -14,6 +12,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <main class="accordion-stack">
       ${renderCharacterSelectSection()}
+      ${renderNamesSection()}
     </main>
   </div>
 `
