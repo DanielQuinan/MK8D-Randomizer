@@ -1,4 +1,4 @@
-const characters = [
+export const characters = [
   { name: 'Baby Daisy', image: '/assets/MK8_BabyDaisy_Icon.png', dlc: false },
   { name: 'Baby Luigi', image: '/assets/MK8_BabyLuigi_Icon.png', dlc: false },
   { name: 'Baby Mario', image: '/assets/MK8_BabyMario_Icon.png', dlc: false },
@@ -52,7 +52,11 @@ const characters = [
 const characterCards = characters
   .map(
     (character) => `
-      <article class="character-card">
+      <article
+        class="character-card"
+        data-character-card
+        data-character-name="${character.name.toLowerCase()}"
+      >
         <img src="${character.image}" alt="${character.name}" />
         <div class="character-title">
           <h3>${character.name}</h3>
@@ -60,7 +64,14 @@ const characterCards = characters
         </div>
         <label class="weight-control">
           <span>Peso</span>
-          <input type="number" min="0" max="100" value="100" />
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value="100"
+            data-character-name="${character.name}"
+            data-weight-input
+          />
         </label>
       </article>
     `,
@@ -68,7 +79,7 @@ const characterCards = characters
   .join('')
 
 export const renderCharacterSelectSection = () => `
-  <details class="accordion" open>
+  <details class="accordion" open data-accordion="1">
     <summary>
       <span class="step">1</span>
       <div>
@@ -81,9 +92,15 @@ export const renderCharacterSelectSection = () => `
       <div class="toolbar">
         <div class="input-group">
           <label>Pesquisa</label>
-          <input type="text" placeholder="Pesquisar personagem..." />
+          <input
+            type="text"
+            placeholder="Pesquisar personagem..."
+            data-character-search
+          />
         </div>
-        <button class="btn ghost" type="button">Resetar pesos</button>
+        <button class="btn ghost" type="button" data-reset-weights>
+          Resetar pesos
+        </button>
       </div>
 
       <div class="character-grid">
@@ -92,7 +109,9 @@ export const renderCharacterSelectSection = () => `
 
       <div class="footer-actions">
         <button class="btn secondary" type="button">Voltar</button>
-        <button class="btn primary" type="button">Próximo</button>
+        <button class="btn primary" type="button" data-next-accordion>
+          Próximo
+        </button>
       </div>
     </div>
   </details>
