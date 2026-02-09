@@ -68,7 +68,7 @@ export const initDrawSection = () => {
     const allowRepeat = loadAllowRepeat()
     const basePool = getWeightsList()
     let availablePool = [...basePool]
-    const results: DrawResult[] = players.map((player, index) => {
+    const results: DrawResult[] = players.map((player) => {
       const currentPool = allowRepeat ? basePool : availablePool
       let eligiblePool = player.hasDlc
         ? currentPool
