@@ -1,3 +1,5 @@
+import { t } from '../services/i18n'
+
 export const characters = [
   { name: 'Baby Daisy', image: '/assets/MK8_BabyDaisy_Icon.png', dlc: false },
   { name: 'Baby Luigi', image: '/assets/MK8_BabyLuigi_Icon.png', dlc: false },
@@ -60,10 +62,10 @@ const characterCards = characters
         <img src="${character.image}" alt="${character.name}" />
         <div class="character-title">
           <h3>${character.name}</h3>
-          ${character.dlc ? '<span class="pill pill-dlc">DLC</span>' : ''}
+          ${character.dlc ? `<span class="pill pill-dlc">${t('dlcLabel')}</span>` : ''}
         </div>
         <label class="weight-control">
-          <span>Peso</span>
+          <span>${t('weightLabel')}</span>
           <input
             type="number"
             min="0"
@@ -83,23 +85,23 @@ export const renderCharacterSelectSection = () => `
     <summary>
       <span class="step">1</span>
       <div>
-        <h2>Selecionar peso de personagens</h2>
-        <p>Defina a chance de cada personagem aparecer no sorteio.</p>
+        <h2>${t('section1Title')}</h2>
+        <p>${t('section1Description')}</p>
       </div>
       <span class="chevron">⌄</span>
     </summary>
     <div class="accordion-body">
       <div class="toolbar">
         <div class="input-group">
-          <label>Pesquisa</label>
+          <label>${t('searchLabel')}</label>
           <input
             type="text"
-            placeholder="Pesquisar personagem..."
+            placeholder="${t('searchPlaceholder')}"
             data-character-search
           />
         </div>
         <button class="btn ghost" type="button" data-reset-weights>
-          Resetar pesos
+          ${t('resetWeights')}
         </button>
       </div>
 
@@ -108,9 +110,9 @@ export const renderCharacterSelectSection = () => `
       </div>
 
       <div class="footer-actions">
-        <button class="btn secondary" type="button">Voltar</button>
+        <button class="btn secondary" type="button">${t('back')}</button>
         <button class="btn primary" type="button" data-next-accordion>
-          Próximo
+          ${t('next')}
         </button>
       </div>
     </div>

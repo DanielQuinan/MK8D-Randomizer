@@ -1,10 +1,12 @@
+import { t } from '../services/i18n'
+
 export const renderResultsSection = () => `
   <details class="accordion" data-accordion="3">
     <summary>
       <span class="step">3</span>
       <div>
-        <h2>Resultado do sorteio</h2>
-        <p>Visualização do resultado final para cada participante.</p>
+        <h2>${t('section3Title')}</h2>
+        <p>${t('section3Description')}</p>
       </div>
       <span class="chevron">⌄</span>
     </summary>
@@ -13,10 +15,10 @@ export const renderResultsSection = () => `
 
       <div class="footer-actions">
         <button class="btn secondary" type="button" data-prev-accordion>
-          Voltar
+          ${t('back')}
         </button>
         <button class="btn primary" type="button" data-run-draw>
-          Sortear novamente
+          ${t('drawAgain')}
         </button>
       </div>
     </div>

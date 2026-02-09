@@ -1,10 +1,12 @@
+import { t } from '../services/i18n'
+
 export const renderNamesSection = () => `
   <details class="accordion" data-accordion="2">
     <summary>
       <span class="step">2</span>
       <div>
-        <h2>Criar nomes para o sorteio</h2>
-        <p>Adicione jogadores, se permite repetir e se possuem DLC.</p>
+        <h2>${t('section2Title')}</h2>
+        <p>${t('section2Description')}</p>
       </div>
       <span class="chevron">⌄</span>
     </summary>
@@ -12,29 +14,29 @@ export const renderNamesSection = () => `
       <div class="names-layout">
         <div class="names-panel">
           <div class="panel-header">
-            <h3>Participantes</h3>
+            <h3>${t('participants')}</h3>
             <button class="btn ghost" type="button" data-add-player>
-              Adicionar nome
+              ${t('addName')}
             </button>
           </div>
           <div class="names-list" data-players-list></div>
         </div>
 
         <div class="names-panel">
-          <h3>Configurações</h3>
+          <h3>${t('settings')}</h3>
           <label class="checkbox">
             <input type="checkbox" data-allow-repeat />
-            <span>Permitir repetir personagens</span>
+            <span>${t('allowRepeat')}</span>
           </label>
         </div>
       </div>
 
       <div class="footer-actions">
         <button class="btn secondary" type="button" data-prev-accordion>
-          Voltar
+          ${t('back')}
         </button>
         <button class="btn primary" type="button" data-next-accordion>
-          Próximo
+          ${t('next')}
         </button>
       </div>
     </div>

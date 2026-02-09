@@ -1,4 +1,5 @@
 import { loadAllowRepeat, loadPlayers, type Player } from './players'
+import { t } from './i18n'
 import {
   getWeightsList,
   getWeightRanges,
@@ -14,7 +15,7 @@ type DrawResult = {
 }
 
 const fallbackCharacter: CharacterWeight = {
-  name: 'Sem personagem',
+  name: t('fallbackCharacterName'),
   image: '/assets/MK8_Mario_Icon.png',
   dlc: false,
   weight: 0,
@@ -33,7 +34,9 @@ const drawOne = (pool: CharacterWeight[]) => {
 }
 
 const formatPlayerName = (player: Player, index: number) =>
-  player.name.trim().length > 0 ? player.name : `Jogador ${index + 1}`
+  player.name.trim().length > 0
+    ? player.name
+    : t('playerFallbackName', { index: index + 1 })
 
 const renderResults = (results: DrawResult[]) =>
   results
@@ -45,7 +48,7 @@ const renderResults = (results: DrawResult[]) =>
             <h3>${result.player.name}</h3>
             <p>${result.character.name}</p>
             <span class="pill ${result.character.dlc ? 'pill-dlc' : 'pill-base'}">
-              ${result.character.dlc ? 'DLC' : 'Base'}
+              ${result.character.dlc ? t('dlcLabel') : t('baseLabel')}
             </span>
           </div>
         </article>

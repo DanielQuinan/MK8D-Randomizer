@@ -7,12 +7,16 @@ import { initWeightsSection } from './services/weights'
 import { initDrawSection } from './services/draw'
 import { initCharacterFilter } from './services/characters'
 import { initAccordionNavigation } from './services/accordion'
+import { applyLocaleToDocument, t } from './services/i18n'
+
+applyLocaleToDocument()
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="app-shell">
     <header class="app-header">
       <div>
-        <h1>Mario Kart 8 Deluxe Randomizer</h1>
+        <h1>${t('appTitle')}</h1>
+        <p class="subtitle">${t('appSubtitle')}</p>
       </div>
     </header>
 
@@ -21,6 +25,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       ${renderNamesSection()}
       ${renderResultsSection()}
     </main>
+
+    <footer class="app-footer">
+      <p class="footer-byline">${t('footerByline')}</p>
+      <p class="footer-email">${t('footerEmail')}</p>
+    </footer>
   </div>
 `
 

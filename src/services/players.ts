@@ -1,3 +1,5 @@
+import { t } from './i18n'
+
 export type Player = {
   id: string
   name: string
@@ -57,16 +59,16 @@ const renderPlayerRow = (player: Player) => `
   <div class="name-row" data-player-id="${player.id}">
     <input
       type="text"
-      placeholder="Nome do jogador"
+      placeholder="${t('playerNamePlaceholder')}"
       value="${player.name.replace(/"/g, '&quot;')}"
       data-player-name
     />
     <label class="checkbox">
       <input type="checkbox" ${player.hasDlc ? 'checked' : ''} data-player-dlc />
-      <span>Tem DLC</span>
+      <span>${t('hasDlc')}</span>
     </label>
     <button class="btn ghost small" type="button" data-remove-player>
-      Remover
+      ${t('remove')}
     </button>
   </div>
 `
