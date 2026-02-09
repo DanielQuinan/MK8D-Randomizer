@@ -21,3 +21,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 initWeightsSection()
+initCharacterFilter()
