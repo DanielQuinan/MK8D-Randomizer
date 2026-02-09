@@ -1,6 +1,7 @@
 import './style.css'
 import { renderCharacterSelectSection } from './sections/charSelect'
 import { renderNamesSection } from './sections/namesSection'
+import { renderResultsSection } from './sections/resultsSection'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="app-shell">
@@ -13,6 +14,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <main class="accordion-stack">
       ${renderCharacterSelectSection()}
       ${renderNamesSection()}
+      ${renderResultsSection()}
     </main>
   </div>
 `
