@@ -11,6 +11,28 @@ import { applyLocaleToDocument, t } from './services/i18n'
 
 applyLocaleToDocument()
 
+const updateMeta = () => {
+  if (typeof document === 'undefined') return
+  const metaTitle = t('metaTitle')
+  const metaDescription = t('metaDescription')
+
+  document.title = metaTitle
+
+  const setMetaContent = (selector: string, content: string) => {
+    const meta = document.querySelector<HTMLMetaElement>(selector)
+    if (!meta) return
+    meta.setAttribute('content', content)
+  }
+
+  setMetaContent('meta[name="description"]', metaDescription)
+  setMetaContent('meta[property="og:title"]', metaTitle)
+  setMetaContent('meta[property="og:description"]', metaDescription)
+  setMetaContent('meta[name="twitter:title"]', metaTitle)
+  setMetaContent('meta[name="twitter:description"]', metaDescription)
+}
+
+updateMeta()
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="app-shell">
     <header class="app-header">

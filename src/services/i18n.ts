@@ -3,6 +3,8 @@ export type Locale = 'pt-BR' | 'en' | 'es'
 type TranslationKey =
   | 'appTitle'
   | 'appSubtitle'
+  | 'metaTitle'
+  | 'metaDescription'
   | 'footerByline'
   | 'footerEmail'
   | 'section1Title'
@@ -37,6 +39,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     appTitle: 'Mario Kart 8 Deluxe Randomizer',
     appSubtitle:
       'Aumente ou reduza o peso de cada personagem para controlar a chance de ele ser sorteado: peso 100 = chance padrão, peso 0 = nunca sai. Depois, adicione os jogadores e execute o sorteio.',
+    metaTitle: 'MK8D Randomizer',
+    metaDescription:
+      'Randomize personagens do Mario Kart 8 Deluxe com chances personalizadas, jogadores e DLC.',
     footerByline: 'Desenvolvido por Aureo Engenharia de Sistemas',
     footerEmail: 'aureosys@gmail.com',
     section1Title: 'Selecionar peso de personagens',
@@ -68,6 +73,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     appTitle: 'Mario Kart 8 Deluxe Randomizer',
     appSubtitle:
       'Raise or lower each character\'s weight to control draw chances: weight 100 = standard odds, weight 0 = never chosen. Then add players and run the draw.',
+    metaTitle: 'MK8D Randomizer',
+    metaDescription:
+      'Randomize Mario Kart 8 Deluxe characters with custom odds, players, and DLC.',
     footerByline: 'Developed by Aureo Systems Engineering',
     footerEmail: 'aureosys@gmail.com',
     section1Title: 'Set character weights',
@@ -99,6 +107,9 @@ const translations: Record<Locale, Record<TranslationKey, string>> = {
     appTitle: 'Mario Kart 8 Deluxe Randomizer',
     appSubtitle:
       'Sube o baja el peso de cada personaje para controlar la probabilidad del sorteo: peso 100 = probabilidad estándar, peso 0 = nunca aparece. Luego agrega jugadores y realiza el sorteo.',
+    metaTitle: 'MK8D Randomizer',
+    metaDescription:
+      'Randomiza personajes de Mario Kart 8 Deluxe con probabilidades personalizadas, jugadores y DLC.',
     footerByline: 'Desarrollado por Aureo Ingeniería de Sistemas',
     footerEmail: 'aureosys@gmail.com',
     section1Title: 'Seleccionar peso de personajes',
