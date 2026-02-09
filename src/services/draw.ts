@@ -43,7 +43,15 @@ const renderResults = (results: DrawResult[]) =>
     .map(
       (result) => `
         <article class="result-card">
-          <img src="${result.character.image}" alt="${result.character.name}" />
+          <img
+            src="${result.character.image}"
+            alt="${result.character.name}"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+            width="64"
+            height="64"
+          />
           <div>
             <h3>${result.player.name}</h3>
             <p>${result.character.name}</p>

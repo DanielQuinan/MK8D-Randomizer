@@ -59,7 +59,15 @@ const characterCards = characters
         data-character-card
         data-character-name="${character.name.toLowerCase()}"
       >
-        <img src="${character.image}" alt="${character.name}" />
+        <img
+          src="${character.image}"
+          alt="${character.name}"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+          width="64"
+          height="64"
+        />
         <div class="character-title">
           <h3>${character.name}</h3>
           ${character.dlc ? `<span class="pill pill-dlc">${t('dlcLabel')}</span>` : ''}
