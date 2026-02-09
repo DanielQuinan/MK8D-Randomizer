@@ -2,6 +2,7 @@ import './style.css'
 import { renderCharacterSelectSection } from './sections/charSelect'
 import { renderNamesSection } from './sections/namesSection'
 import { renderResultsSection } from './sections/resultsSection'
+import { initPlayersSection } from './services/players'
 import { initWeightsSection } from './services/weights'
 import { initCharacterFilter } from './services/characters'
 
@@ -20,5 +21,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </main>
   </div>
 `
+initPlayersSection()
 initWeightsSection()
 initCharacterFilter()
