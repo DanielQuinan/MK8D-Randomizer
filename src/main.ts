@@ -5,6 +5,7 @@ import { renderResultsSection } from './sections/resultsSection'
 import { initPlayersSection } from './services/players'
 import { initWeightsSection } from './services/weights'
 import { initCharacterFilter } from './services/characters'
+import { initAccordionNavigation } from './services/accordion'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="app-shell">
@@ -24,3 +25,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 initPlayersSection()
 initWeightsSection()
 initCharacterFilter()
+initAccordionNavigation()

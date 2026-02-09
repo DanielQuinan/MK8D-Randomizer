@@ -98,6 +98,11 @@ h1 {
   color: #334155;
 }
 
+.btn.small {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+
 .accordion-stack {
   display: flex;
   flex-direction: column;
@@ -277,6 +282,12 @@ select {
   gap: 12px;
 }
 
+.names-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .name-row input[type='text'] {
   flex: 1;
 }
@@ -294,6 +305,7 @@ select {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
+
 
 .pill {
   display: inline-flex;
