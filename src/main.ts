@@ -25,6 +25,7 @@ const updateMeta = () => {
   }
 
   setMetaContent('meta[name="description"]', metaDescription)
+  setMetaContent('meta[name="author"]', t('footerByline'))
   setMetaContent('meta[property="og:title"]', metaTitle)
   setMetaContent('meta[property="og:description"]', metaDescription)
   setMetaContent('meta[name="twitter:title"]', metaTitle)

@@ -1,18 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Randomize personagens do Mario Kart 8 Deluxe com chances personalizados, jogadores e DLC."
+      content="Randomize personagens do Mario Kart 8 Deluxe com amigos, definindo chances personalizadas, jogadores e DLC."
     />
+    <meta name="author" content="Desenvolvido por Aureo Engenharia de Sistemas" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mk8drandomizer.aureosys.com/" />
+    <link rel="alternate" href="https://mk8drandomizer.aureosys.com/" hreflang="pt-BR" />
+    <link rel="alternate" href="https://mk8drandomizer.aureosys.com/" hreflang="en" />
+    <link rel="alternate" href="https://mk8drandomizer.aureosys.com/" hreflang="es" />
+    <link rel="alternate" href="https://mk8drandomizer.aureosys.com/" hreflang="x-default" />
+
+    <script>
+      (function () {
+        try {
+          var nav = (typeof navigator !== 'undefined' && (navigator.languages && navigator.languages[0] || navigator.language)) || '';
+          var normalized = String(nav).toLowerCase();
+          var lang = 'en';
+          if (normalized.indexOf('pt') === 0) lang = 'pt-BR';
+          else if (normalized.indexOf('es') === 0) lang = 'es';
+          else lang = 'en';
+          document.documentElement.lang = lang;
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+    </script>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MK8D Randomizer" />
+    <meta property="og:title" content="Mario Kart 8 Deluxe Randomizer" />
     <meta
       property="og:description"
-      content="Randomize personagens do Mario Kart 8 Deluxe com chances personalizados, jogadores e DLC."
+      content="Randomize personagens do Mario Kart 8 Deluxe com amigos, definindo chances personalizadas, jogadores e DLC."
     />
     <meta
       property="og:image"
@@ -20,17 +43,34 @@
     />
     <meta property="og:url" content="https://mk8drandomizer.aureosys.com/" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="MK8D Randomizer" />
+    <meta name="twitter:title" content="Mario Kart 8 Deluxe Randomizer" />
     <meta
       name="twitter:description"
-      content="Randomize personagens do Mario Kart 8 Deluxe com chances personalizados, jogadores e DLC."
+      content="Randomize personagens do Mario Kart 8 Deluxe com amigos, definindo chances personalizadas, jogadores e DLC."
     />
     <meta name="google-site-verification" content="Nw4M6BYER4qdV5YAsNqOCW7I8Oi3JL10rpyYa5os9V4" />
     <meta
       name="twitter:image"
       content="https://mk8drandomizer.aureosys.com/assets/MK8_Mario_Icon.png"
     />
-    <title>MK8D Randomizer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mario Kart 8 Deluxe Randomizer",
+        "alternateName": "MK8D Randomizer",
+        "url": "https://mk8drandomizer.aureosys.com/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Aureo Engenharia de Sistemas",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mk8drandomizer.aureosys.com/assets/MK8_Mario_Icon.png"
+          }
+        }
+      }
+    </script>
+    <title>Mario Kart 8 Deluxe Randomizer</title>
   </head>
   <body>
     <div id="app"></div>
